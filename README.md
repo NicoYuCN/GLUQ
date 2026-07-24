@@ -56,7 +56,7 @@ All hyper-parameters are stored inside the checkpoint and are read automatically
 | Graph | patch kNN graph, k = 24, τ = 0.35 (exact graph construction stored in the checkpoint) |
 | GCN | 3 residual layers, α = 0.55, hidden dim 512 |
 | Readout | gated attention pooling + MLP + affine calibration |
-| Loss (training) | EMA-normalized multi-objective, λ_corr = 0.8, λ_var = 0.2 |
+| Loss (training) | EMA-normalized multi-objective, λ_corr = 0.8, λ_rank = 0.2 |
 
 
 All hyper-parameters (graph construction, k, τ, α, dropout, etc.) are stored **inside** the checkpoint and are read automatically by `gluq_inference.py`, so the released `.pt` is self-describing and no flags are needed at inference time.
